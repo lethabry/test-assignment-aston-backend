@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "airbnb-base", // или 'airbnb' для React
+    "plugin:prettier/recommended", // Отключение правил eslint, конфликтующих с prettier
+    "plugin:import/recommended" // Правила импорта
+  ],
+  "plugins": [
+    "prettier", // Плагин prettier для eslint
+    "import" // Плагин импорта
+  ],
+  "rules": {
+    "prettier/prettier": "error", // Ошибки для неправильного форматирования prettier
+    "no-underscore-dangle": [
+      "error",
+      { "allow": ["_id"] }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  }
+}

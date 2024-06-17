@@ -6,6 +6,8 @@
 
 #### Серверное приложение управления статусом списка клиентов
 
+[ссылка на задание](https://docs.google.com/document/d/1sn300zahmJJXclV9ZwoOlIX4hrAaPQbJ1rzyjgrSiTs/edit?pli=1)
+
 Эндпоинты:
 
     post /signin - авторизация пользователя

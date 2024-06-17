@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const checkIsNumbers = require('../utils/validator');
 
 const clientSchema = new mongoose.Schema({
-	accontNumber: {
+	accountNumber: {
 		type: String,
 		required: true
 	},
@@ -39,12 +39,13 @@ const clientSchema = new mongoose.Schema({
 		}
 	},
 	responcibleWorker: {
-		type: String,
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'user',
 		required: true
 	},
 	status: {
 		type: String,
-		enum: ['В работе', 'Отказ', 'Сделка закрыта'],
+		enum: ['В работе', 'Отказ', 'Сделка закрыта', 'Не в работе'],
 		default: 'Не в работе'
 	}
 });

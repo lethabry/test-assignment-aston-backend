@@ -12,7 +12,7 @@ const clientSchema = new mongoose.Schema({
 		maxlength: 30,
 		required: true
 	},
-	firstName: {
+	lastName: {
 		type: String,
 		minlength: 2,
 		maxlength: 30,

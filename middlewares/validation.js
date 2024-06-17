@@ -2,7 +2,7 @@ const { celebrate, Joi } = require('celebrate');
 
 const loginValidation = celebrate({
 	body: Joi.object().keys({
-		email: Joi.string().email().required(),
+		login: Joi.string().required().min(2).max(32),
 		password: Joi.string().required()
 	})
 });

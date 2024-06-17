@@ -24,7 +24,7 @@ const generateClients = (count, array) => {
 			firstName: faker.person.firstName(),
 			lastName: faker.person.lastName(),
 			middleName: faker.person.middleName(),
-			birthDate: faker.date.past(),
+			birthDate: faker.date.birthdate(),
 			inn: faker.finance.accountNumber(12),
 			responcibleWorker: getRandomElement(array)
 		});
@@ -39,7 +39,7 @@ const generateUsers = (count, array) => {
 	for (let i = 0; i < count; i++) {
 		users.push({
 			fullname: getRandomElement(array),
-			email: faker.internet.email(),
+			login: faker.internet.displayName(),
 			password: faker.internet.password()
 		});
 	}

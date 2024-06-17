@@ -8,14 +8,13 @@ const getSelectedClients = (req, res, next) => {
 				const filteredClients = clients.filter(
 					(client) => client.responcibleWorker.toString() === req.user._id
 				);
-				res.send({ clients: filteredClients });
+				res.send([...filteredClients]);
 			}
 		})
 		.catch(next);
 };
 
 const changeClientStatus = (req, res, next) => {
-	console.log(req.params);
 	const { status } = req.body;
 	Client.findById(req.params._id)
 		.then((client) => {
